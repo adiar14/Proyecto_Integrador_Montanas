@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "622304902132",
+    "firebase_url": "https://proyecto-integrador-5255e.firebaseio.com",
+    "project_id": "proyecto-integrador-5255e",
+    "storage_bucket": "proyecto-integrador-5255e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622304902132:android:cb1a6014435e8ca5",
+        "android_client_info": {
+          "package_name": "com.example.adiar.proyecto_integrador_montanas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "622304902132-1oma845102411g82217ut29ch268dln8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.adiar.proyecto_integrador_montanas",
+            "certificate_hash": "c7ab48881baf7bd2742949f9e5700d42350df775"
+          }
+        },
+        {
+          "client_id": "622304902132-ehre378h4q4i3iqm4urojksd3br5s8vo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiP6ZqKwIgkbHnxi4FVfOLgvaqw3NhDBY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "622304902132-ehre378h4q4i3iqm4urojksd3br5s8vo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
