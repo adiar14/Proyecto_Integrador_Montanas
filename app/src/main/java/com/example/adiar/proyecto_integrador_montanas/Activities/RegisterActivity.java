@@ -32,7 +32,6 @@ import com.google.firebase.storage.UploadTask;
 
 public class RegisterActivity extends AppCompatActivity {
     ImageView imgUsuario;
-
     static int PreqCode = 1;
     static int REQUESCODE = 1;
     Uri pickedUmgUri;
@@ -86,8 +85,6 @@ public class RegisterActivity extends AppCompatActivity {
                 }else{
                     //si todo va bien se procede a pasar losdatos
                     CreateUserAccount(name,email,paswd1);
-                    updateUri();
-
                 }
 
 
@@ -106,6 +103,9 @@ public class RegisterActivity extends AppCompatActivity {
                 }else{
                     openGallery();
                 }
+
+
+
             }
         });
     }
@@ -154,7 +154,7 @@ public class RegisterActivity extends AppCompatActivity {
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if(task.isSuccessful()){
                                                 showMessage("Registro completo");
-
+                                                updateUri();
                                             }
                                         }
                                     });
@@ -166,8 +166,9 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void updateUri() {
-        Intent logInActivity = new Intent(getApplicationContext(), LogInActivity.class);
-        startActivity(logInActivity);
+        Intent homeActivity = new Intent(getApplicationContext(), HomeActivity.class);
+        startActivity(homeActivity);
+        finish();
     }
 
     private void showMessage(String s) {
