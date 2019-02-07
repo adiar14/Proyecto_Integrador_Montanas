@@ -23,6 +23,22 @@
           }
         },
         {
+          "client_id": "622304902132-lrlqcb9kp48598vvd7ccipna6hopklne.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.adiar.proyecto_integrador_montanas",
+            "certificate_hash": "c8c2984ac26107dcfff752fcf2baf7d328f16c32"
+          }
+        },
+        {
+          "client_id": "622304902132-nkhm77nsb98svdoe99a44kc0oq00mmg4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.adiar.proyecto_integrador_montanas",
+            "certificate_hash": "4d900b871c71938942a665c53774f88fe97b4c1d"
+          }
+        },
+        {
           "client_id": "622304902132-ehre378h4q4i3iqm4urojksd3br5s8vo.apps.googleusercontent.com",
           "client_type": 3
         }
