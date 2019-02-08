@@ -40,7 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText userEmail, userPassword,userPassword2,userName;
     private ProgressBar loadingProgress;
     private Button btnRegistrarse;
-
+    Toast toast;
     private FirebaseAuth mAuth;
 
     @Override
@@ -77,12 +77,17 @@ public class RegisterActivity extends AppCompatActivity {
 
 
                 //excepcion de vacio de campos y no coincidencia de la contraseña
-                if(email.isEmpty() || name.isEmpty() || paswd1.isEmpty() || !paswdCompro.equals(paswd1)){
-
+                if(!paswdCompro.equals(paswd1)){
                     showMessage("Porfa escribe las dos contraseñas iguales");
+                }
+                if(email.isEmpty() || name.isEmpty() || paswd1.isEmpty()){
+
+                    showMessage("Hay campos sin rellenar");
                     btnRegistrarse.setVisibility(View.VISIBLE);
                     loadingProgress.setVisibility(View.INVISIBLE);
 
+                }else if(!paswdCompro.equals(paswd1)){
+                    showMessage("Porfa escribe las dos contraseñas iguales");
                 }else{
                     //si todo va bien se procede a pasar losdatos
                     CreateUserAccount(name,email,paswd1);
@@ -170,11 +175,6 @@ public class RegisterActivity extends AppCompatActivity {
         startActivity(logInActivity);
     }
 
-    private void showMessage(String s) {
-
-        Toast.makeText(getApplicationContext(), s, Toast.LENGTH_LONG).show();
-    }
-
     private void checkAndrequestForPermission() {
         if(ContextCompat.checkSelfPermission(RegisterActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED){
@@ -204,4 +204,11 @@ public class RegisterActivity extends AppCompatActivity {
             imgUsuario.setImageURI(pickedUmgUri);
         }
     }
+    private void showMessage(String s) {
+        if (toast != null)
+            toast.cancel();
+        toast = Toast.makeText(this, s, Toast.LENGTH_LONG);
+        toast.show();
+    }
+
 }
