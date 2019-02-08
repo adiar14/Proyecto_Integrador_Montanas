@@ -26,6 +26,7 @@ public class LogInActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     //declaramos el intent al que queramos acceder
     private Intent homeActivity;
+    Toast toast;
     private Intent registrerActivity;
 
     @Override
@@ -51,13 +52,14 @@ public class LogInActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 barraProgreso.setVisibility(View.VISIBLE);
-                btnAcceso.setVisibility(View.INVISIBLE);
+                //btnAcceso.setVisibility(View.INVISIBLE);
 
                 final String idUsuario = nombreUsuario.getText().toString();
                 final String contraseniaUsuario = contraseña.getText().toString();
 
                 if(idUsuario.isEmpty() || contraseniaUsuario.isEmpty()){
                     showMessage("Verifica los datos introducidos");
+                    barraProgreso.setVisibility(View.INVISIBLE);
                 }else{
                     acceder(idUsuario, contraseniaUsuario);
                 }
@@ -72,15 +74,16 @@ public class LogInActivity extends AppCompatActivity {
     }
 
     private void acceder(String idUsuario, String contraseniaUsuario) {
+
             mAuth.signInWithEmailAndPassword(idUsuario, contraseniaUsuario).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        barraProgreso.setVisibility(View.INVISIBLE);
-                        btnAcceso.setVisibility(View.VISIBLE);
+                        //btnAcceso.setVisibility(View.VISIBLE);
                         actualizarUsuario();
                     }else{
                         showMessage(task.getException().getMessage());
+                        barraProgreso.setVisibility(View.INVISIBLE);
                     }
 
 
@@ -95,9 +98,11 @@ public class LogInActivity extends AppCompatActivity {
     }
 
     private void showMessage(String s) {
-        Toast.makeText(getApplicationContext(), s, Toast.LENGTH_LONG).show();
+        if (toast != null)
+            toast.cancel();
+        toast = Toast.makeText(this, s, Toast.LENGTH_LONG);
+        toast.show();
     }
-
 
     public void accesoRegistro(View v){
         startActivity(registrerActivity);
