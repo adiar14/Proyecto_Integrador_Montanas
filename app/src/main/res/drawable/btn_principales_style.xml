@@ -1,9 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#00ADB0"/>
-    <corners android:radius="32dp"/>
-    <padding android:left="12dp" android:right="12dp"
-        android:bottom="12dp"
-        android:top="12dp"/>
-
-</shape>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="#00ADB0"/>
+            <corners android:radius="32dp"/>
+            <padding android:left="12dp" android:right="12dp"
+                android:bottom="12dp"
+                android:top="12dp"/>
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="#00CED1"/>
+            <corners android:radius="32dp"/>
+            <padding android:left="12dp" android:right="12dp"
+                android:bottom="12dp"
+                android:top="12dp"/>
+        </shape>
+    </item>
+</selector>

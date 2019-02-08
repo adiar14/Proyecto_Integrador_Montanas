@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.adiar.proyecto_integrador_montanas">
+
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
@@ -17,7 +18,7 @@
         <activity
             android:name=".Activities.HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activities.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,6 +28,10 @@
         </activity>
         <activity android:name=".Activities.LogInActivity" />
         <activity android:name=".Activities.RegisterActivity" />
+        <activity
+            android:name=".Activities.HomeVoluntariosActivity"
+            android:label="@string/title_activity_home_voluntarios"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
