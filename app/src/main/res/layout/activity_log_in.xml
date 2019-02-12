@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,36 +7,27 @@
     android:layout_height="match_parent"
     tools:context=".Activities.LogInActivity">
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="285dp"
+        android:layout_height="282dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="65dp"
+        android:layout_x="94dp"
+        android:layout_y="57dp"
         app:layout_constraintBottom_toTopOf="@+id/etId"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arbol" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="206dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="377dp" />
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="registro.json"
+        app:lottie_imageAssetsFolder="assets"
+        app:lottie_loop="false" />
 
     <EditText
         android:id="@+id/etId"
@@ -48,15 +39,18 @@
         android:layout_marginEnd="56dp"
         android:layout_marginRight="56dp"
         android:layout_marginBottom="22dp"
+        android:layout_x="63dp"
+        android:layout_y="304dp"
         android:background="@drawable/reg_edittext_style"
         android:ems="10"
         android:hint="@string/et_id"
-        android:inputType="textPassword"
+        android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/etContrasenia"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/etContrasenia"
@@ -68,6 +62,8 @@
         android:layout_marginEnd="56dp"
         android:layout_marginRight="56dp"
         android:layout_marginBottom="64dp"
+        android:layout_x="65dp"
+        android:layout_y="392dp"
         android:background="@drawable/reg_edittext_style"
         android:ems="10"
         android:hint="@string/et_contrasenia"
@@ -88,6 +84,8 @@
         android:layout_marginEnd="162dp"
         android:layout_marginRight="162dp"
         android:layout_marginBottom="8dp"
+        android:layout_x="72dp"
+        android:layout_y="472dp"
         android:background="@drawable/btn_principales_style"
         android:text="@string/btn_acceder"
         android:textColor="#ffffff"
@@ -96,7 +94,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline4"
+
         app:layout_constraintVertical_bias="0.0" />
 
     <ProgressBar
@@ -104,6 +102,8 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_x="189dp"
+        android:layout_y="473dp"
         app:layout_constraintBottom_toBottomOf="@+id/btnAcceso"
         app:layout_constraintEnd_toEndOf="@+id/btnAcceso"
         app:layout_constraintHorizontal_bias="0.496"
@@ -120,17 +120,14 @@
         android:layout_marginEnd="162dp"
         android:layout_marginRight="162dp"
         android:layout_marginBottom="8dp"
+        android:layout_x="134dp"
+        android:layout_y="558dp"
         android:background="@drawable/btn_principales_style"
         android:onClick="accesoRegistro"
         android:text="@string/btnRegistro"
         android:textColor="#ffffff"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline4"
-        app:layout_constraintVertical_bias="0.387" />
+        />
 
 
-</android.support.constraint.ConstraintLayout>
+</AbsoluteLayout>
