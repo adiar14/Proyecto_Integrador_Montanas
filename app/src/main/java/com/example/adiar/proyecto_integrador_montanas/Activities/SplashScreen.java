@@ -13,6 +13,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+
 import com.example.adiar.proyecto_integrador_montanas.R;
 import com.google.firebase.FirebaseApp;
 
@@ -34,6 +35,9 @@ public class SplashScreen extends Activity {
 
 
         LogActivity = new Intent(this, LogInActivity.class);
+
+
+
 
        // TextView myTitle = (TextView)findViewById(R.id.textView3);
         ImageView imagen = (ImageView)findViewById(R.id.imagen_logo_inicio);

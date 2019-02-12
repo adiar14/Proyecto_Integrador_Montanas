@@ -16,7 +16,7 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="et_id">Nombre/Correo</string>
+    <string name="et_id">Introduce tu Correo</string>
     <string name="et_contrasenia">Contraseña</string>
     <string name="A" />
     <string name="btn_acceder">ACCEDER</string>
