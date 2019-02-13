@@ -12,20 +12,20 @@
 
     <ImageView
         android:id="@+id/imagen_logo_inicio"
-        android:layout_width="163dp"
-        android:layout_height="266dp"
+        android:layout_width="326dp"
+        android:layout_height="366dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="119dp"
-        android:layout_marginLeft="119dp"
-        android:layout_marginTop="148dp"
-        android:layout_marginEnd="109dp"
-        android:layout_marginRight="109dp"
-        android:layout_marginBottom="297dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginLeft="49dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="275dp"
         android:src="@drawable/arbolfinalblanco" />
 
 </RelativeLayout>

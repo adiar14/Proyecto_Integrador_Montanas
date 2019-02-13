@@ -1,12 +1,17 @@
 package com.example.adiar.proyecto_integrador_montanas.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 
+import com.bumptech.glide.Glide;
 import com.example.adiar.proyecto_integrador_montanas.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -14,9 +19,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class HomeVoluntariosActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    FirebaseUser usuarioActual;
+    private FirebaseAuth mAuth;
+
+
+    TextView navNombreUsuario;
+    TextView navUsuarioEmail;
+    ImageView navUsuarioImagen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +39,14 @@ public class HomeVoluntariosActivity extends AppCompatActivity
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        //Init Firebase
+        mAuth = FirebaseAuth.getInstance();
+        usuarioActual = mAuth.getCurrentUser();
+
+
+
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -42,7 +65,10 @@ public class HomeVoluntariosActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        updateNavCabecero();
     }
+
+
 
     @Override
     public void onBackPressed() {
@@ -82,22 +108,41 @@ public class HomeVoluntariosActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_cuenta){
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_misGrupos) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_notificaciones) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_ayuda) {
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_salir) {//En el proyecto hay que direccionarlo al Splash
+            Intent backSLogIN = new Intent(this, LogInActivity.class);
+            startActivity(backSLogIN);
+            finish();
 
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void updateNavCabecero() {
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
+        View actualizarCabecero = navigationView.getHeaderView(0);
+
+        navNombreUsuario = actualizarCabecero.findViewById(R.id.navUsuarioNombre);
+        navUsuarioEmail = actualizarCabecero.findViewById(R.id.navUsuarioEmail);
+        navUsuarioImagen = actualizarCabecero.findViewById(R.id.navUsuarioImgPerfil);
+
+
+
+        navNombreUsuario.setText(usuarioActual.getDisplayName());
+        navUsuarioEmail.setText(usuarioActual.getEmail());
+
+        Glide.with(this).load(usuarioActual.getPhotoUrl()).into(navUsuarioImagen);
     }
 }

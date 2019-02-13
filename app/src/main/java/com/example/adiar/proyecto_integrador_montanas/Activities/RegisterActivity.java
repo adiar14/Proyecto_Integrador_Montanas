@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.adiar.proyecto_integrador_montanas.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -37,7 +38,7 @@ public class RegisterActivity extends AppCompatActivity {
     Uri pickedUmgUri;
     //Almacenar las imagenes de perfil
     private EditText userEmail, userPassword,userPassword2,userName;
-    private ProgressBar loadingProgress;
+    private LottieAnimationView loadingProgress;
     private Button btnRegistrarse;
 
     private FirebaseAuth mAuth;

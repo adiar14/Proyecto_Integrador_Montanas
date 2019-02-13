@@ -11,6 +11,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.adiar.proyecto_integrador_montanas.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -20,8 +21,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LogInActivity extends AppCompatActivity {
     private EditText nombreUsuario, contraseña;
-    private Button btnAcceso;
-    private ProgressBar barraProgreso;
+    private Button btnAcceso, btnRegistro;
+    private LottieAnimationView barraProgreso;
     //Conexion a firebase
     private FirebaseAuth mAuth;
     //declaramos el intent al que queramos acceder
@@ -39,6 +40,7 @@ public class LogInActivity extends AppCompatActivity {
         nombreUsuario = findViewById(R.id.etId);
         contraseña = findViewById(R.id.etContrasenia);
         btnAcceso =findViewById(R.id.btnAcceso);
+        btnRegistro = findViewById(R.id.btnAcceso2);
         barraProgreso =findViewById(R.id.logInBar);
         //Inicializar Firebase
         mAuth = FirebaseAuth.getInstance();
@@ -52,7 +54,8 @@ public class LogInActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 barraProgreso.setVisibility(View.VISIBLE);
-                //btnAcceso.setVisibility(View.INVISIBLE);
+                btnAcceso.setVisibility(View.INVISIBLE);
+                btnRegistro.setVisibility(View.INVISIBLE);
 
                 final String idUsuario = nombreUsuario.getText().toString();
                 final String contraseniaUsuario = contraseña.getText().toString();
@@ -60,6 +63,8 @@ public class LogInActivity extends AppCompatActivity {
                 if(idUsuario.isEmpty() || contraseniaUsuario.isEmpty()){
                     showMessage("Verifica los datos introducidos");
                     barraProgreso.setVisibility(View.INVISIBLE);
+                    btnAcceso.setVisibility(View.VISIBLE);
+                    btnRegistro.setVisibility(View.VISIBLE);
                 }else{
                     acceder(idUsuario, contraseniaUsuario);
                 }
@@ -79,11 +84,13 @@ public class LogInActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        //btnAcceso.setVisibility(View.VISIBLE);
+                        barraProgreso.setVisibility(View.VISIBLE);
+                        btnAcceso.setVisibility(View.INVISIBLE);
+                        btnRegistro.setVisibility(View.INVISIBLE);
                         actualizarUsuario();
                     }else{
                         showMessage(task.getException().getMessage());
-                        barraProgreso.setVisibility(View.INVISIBLE);
+
                     }
 
 
