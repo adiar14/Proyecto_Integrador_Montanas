@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/absoluteLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back_general_style"
+    android:background="@drawable/grad_bg"
     tools:context=".Activities.LogInActivity">
 
     <com.airbnb.lottie.LottieAnimationView
@@ -18,6 +18,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:layout_x="137dp"
+        android:layout_y="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.78"
@@ -31,7 +33,7 @@
 
     <EditText
         android:id="@+id/etId"
-        android:layout_width="wrap_content"
+        android:layout_width="246dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -39,6 +41,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:layout_x="88dp"
+        android:layout_y="242dp"
         android:autofillHints=""
         android:background="@drawable/reg_edittext_style"
         android:ems="10"
@@ -54,7 +58,7 @@
 
     <EditText
         android:id="@+id/etContrasenia"
-        android:layout_width="wrap_content"
+        android:layout_width="246dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -62,6 +66,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:layout_x="91dp"
+        android:layout_y="303dp"
         android:background="@drawable/reg_edittext_style"
         android:ems="10"
         android:hint="@string/et_contrasenia"
@@ -75,7 +81,7 @@
 
     <Button
         android:id="@+id/btnAcceso"
-        android:layout_width="wrap_content"
+        android:layout_width="246dp"
         android:layout_height="49dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -84,6 +90,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
 
+        android:layout_x="96dp"
+        android:layout_y="382dp"
         android:background="@drawable/btn_principales_style"
         android:text="@string/btn_acceder"
         android:textColor="#ffffff"
@@ -99,6 +107,8 @@
         android:id="@+id/logInBar"
         android:layout_width="64dp"
         android:layout_height="48dp"
+        android:layout_x="230dp"
+        android:layout_y="566dp"
         app:layout_constraintBottom_toBottomOf="@+id/btnAcceso"
         app:layout_constraintEnd_toEndOf="@+id/btnAcceso"
         app:layout_constraintHorizontal_bias="0.481"
@@ -112,10 +122,12 @@
 
     <Button
         android:id="@+id/btnAcceso2"
-        android:layout_width="wrap_content"
+        android:layout_width="246dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="8dp"
+        android:layout_x="91dp"
+        android:layout_y="450dp"
         android:background="@drawable/btn_principales_style"
         android:onClick="accesoRegistro"
         android:text="@string/btnRegistro"
@@ -131,19 +143,21 @@
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="54dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:layout_x="47dp"
+        android:layout_y="541dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintHorizontal_bias="0.19"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.781" />
+        app:layout_constraintVertical_bias="0.795" />
 
 
-</android.support.constraint.ConstraintLayout>
+</AbsoluteLayout>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back_general_style"
+    android:background="@drawable/grad_bg"
     tools:context=".Activities.RegisterActivity"
     android:orientation="vertical">
 
@@ -18,6 +18,8 @@
         android:layout_marginEnd="98dp"
         android:layout_marginRight="98dp"
         android:layout_marginBottom="40dp"
+        android:layout_x="139dp"
+        android:layout_y="75dp"
         android:src="@drawable/userphoto"
         app:layout_constraintBottom_toTopOf="@+id/regName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +44,7 @@
 
     <EditText
         android:id="@+id/regName"
-        android:layout_width="wrap_content"
+        android:layout_width="246dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -50,12 +52,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="30dp"
+        android:layout_x="92dp"
+        android:layout_y="230dp"
         android:background="@drawable/reg_edittext_style"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="textPersonName"
-        android:textSize="20sp"
         android:textCursorDrawable="@null"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/regEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -64,13 +68,15 @@
 
     <EditText
         android:id="@+id/regEmail"
-        android:layout_width="wrap_content"
+        android:layout_width="246dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="30dp"
+        android:layout_x="91dp"
+        android:layout_y="287dp"
         android:background="@drawable/reg_edittext_style"
         android:ems="10"
         android:hint="Email"
@@ -84,18 +90,20 @@
 
     <EditText
         android:id="@+id/regPass1"
-        android:layout_width="wrap_content"
+        android:layout_width="246dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="87dp"
         android:layout_marginLeft="87dp"
         android:layout_marginEnd="88dp"
         android:layout_marginRight="88dp"
         android:layout_marginBottom="30dp"
-        android:textCursorDrawable="@null"
+        android:layout_x="94dp"
+        android:layout_y="346dp"
         android:background="@drawable/reg_edittext_style"
         android:ems="10"
         android:hint="Contraseña"
         android:inputType="textPassword"
+        android:textCursorDrawable="@null"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/regpass2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -105,18 +113,20 @@
 
     <EditText
         android:id="@+id/regpass2"
-        android:layout_width="wrap_content"
+        android:layout_width="246dp"
         android:layout_height="wrap_content"
-        android:textCursorDrawable="@null"
         android:layout_marginStart="88dp"
         android:layout_marginLeft="88dp"
         android:layout_marginEnd="87dp"
         android:layout_marginRight="87dp"
         android:layout_marginBottom="30dp"
+        android:layout_x="94dp"
+        android:layout_y="407dp"
         android:background="@drawable/reg_edittext_style"
         android:ems="10"
         android:hint="ConfirmContra"
         android:inputType="textPassword"
+        android:textCursorDrawable="@null"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btnRegistrar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -126,22 +136,17 @@
 
     <Button
         android:id="@+id/btnRegistrar"
-        android:layout_width="wrap_content"
+        android:layout_width="246dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="129dp"
-        android:layout_marginLeft="129dp"
-        android:layout_marginEnd="129dp"
-        android:layout_marginRight="129dp"
-        android:layout_marginBottom="92dp"
+        android:layout_x="96dp"
+        android:layout_y="483dp"
         android:background="@drawable/btn_principales_style"
         android:text="REGISTRARSE"
         android:textColor="#ffffff"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="589dp" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/regProBar"
@@ -169,6 +174,8 @@
         android:layout_marginEnd="152dp"
         android:layout_marginRight="152dp"
         android:layout_marginBottom="15dp"
+        android:layout_x="127dp"
+        android:layout_y="0dp"
         android:fontFamily="@font/annie_use_your_telescope"
         android:text="@string/titulo"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
@@ -181,4 +188,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-</android.support.constraint.ConstraintLayout>
+</AbsoluteLayout>
