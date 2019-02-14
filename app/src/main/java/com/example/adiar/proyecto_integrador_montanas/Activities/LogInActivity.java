@@ -13,10 +13,13 @@ import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.example.adiar.proyecto_integrador_montanas.R;
+import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
@@ -24,12 +27,16 @@ import com.google.firebase.auth.ActionCodeSettings;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class LogInActivity extends AppCompatActivity {
+public class LogInActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
     private EditText nombreUsuario, contraseña;
     private Button btnAcceso, btnRegistro;
     private LottieAnimationView barraProgreso;
     //Conexion a firebase
     private FirebaseAuth mAuth;
+    //lOG IN GOOGLE
+    private GoogleApiClient googleApi;
+    public static final int SING_IN_CODE = 777;
+
     //declaramos el intent al que queramos acceder
     private Intent homeActivity;
     Toast toast;
@@ -54,7 +61,22 @@ public class LogInActivity extends AppCompatActivity {
         homeActivity = new Intent(this, HomeActivity.class);
         registrerActivity = new Intent(this, RegisterActivity.class);
 
-        //GOOGLE AUTH
+        //gOOGLE
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+
+        googleApi = new GoogleApiClient.Builder(this)
+                .enableAutoManage(this,this)
+                .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
+                .build();
+
+
+
+
+
+
+        /*//GOOGLE AUTH
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
@@ -64,7 +86,7 @@ public class LogInActivity extends AppCompatActivity {
         // Check for existing Google Sign In account, if the user is already signed in
 // the GoogleSignInAccount will be non-null.
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-        updateUI(account);
+        updateUI(account);*/
 
 
 
@@ -140,4 +162,8 @@ public class LogInActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+        
+    }
 }
