@@ -21,7 +21,8 @@ import com.google.firebase.FirebaseApp;
 
 public class SplashScreen extends Activity {
 
-    private Intent LogActivity;
+
+    private Intent homePublicActivity;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
 
@@ -34,8 +35,8 @@ public class SplashScreen extends Activity {
 
 
 
-        LogActivity = new Intent(this, LogInActivity.class);
 
+        homePublicActivity = new Intent(this, LogInActivity.class);
 
 
 
@@ -67,7 +68,7 @@ public class SplashScreen extends Activity {
             @Override
             public void run() {
 
-                startActivity(LogActivity);
+                startActivity(homePublicActivity);
                 finish();
             }
         }, 3000);

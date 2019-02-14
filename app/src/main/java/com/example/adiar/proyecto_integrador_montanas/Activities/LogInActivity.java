@@ -11,17 +11,23 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.adiar.proyecto_integrador_montanas.R;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.ActionCodeSettings;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LogInActivity extends AppCompatActivity {
     private EditText nombreUsuario, contraseña;
-    private Button btnAcceso;
-    private ProgressBar barraProgreso;
+    private Button btnAcceso, btnRegistro;
+    private LottieAnimationView barraProgreso;
     //Conexion a firebase
     private FirebaseAuth mAuth;
     //declaramos el intent al que queramos acceder
@@ -39,6 +45,7 @@ public class LogInActivity extends AppCompatActivity {
         nombreUsuario = findViewById(R.id.etId);
         contraseña = findViewById(R.id.etContrasenia);
         btnAcceso =findViewById(R.id.btnAcceso);
+        btnRegistro = findViewById(R.id.btnAcceso2);
         barraProgreso =findViewById(R.id.logInBar);
         //Inicializar Firebase
         mAuth = FirebaseAuth.getInstance();
@@ -47,12 +54,28 @@ public class LogInActivity extends AppCompatActivity {
         homeActivity = new Intent(this, HomeActivity.class);
         registrerActivity = new Intent(this, RegisterActivity.class);
 
+        //GOOGLE AUTH
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        // Construye un GoogleSignInClient con las opciones especificadas por gso.
+        GoogleSignInClient mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        // Check for existing Google Sign In account, if the user is already signed in
+// the GoogleSignInAccount will be non-null.
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+        updateUI(account);
+
+
+
+        //aCCIONES DE LAS BARRAS DE PROGRESO
         barraProgreso.setVisibility(View.INVISIBLE);
         btnAcceso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 barraProgreso.setVisibility(View.VISIBLE);
-                //btnAcceso.setVisibility(View.INVISIBLE);
+                btnAcceso.setVisibility(View.INVISIBLE);
+                btnRegistro.setVisibility(View.INVISIBLE);
 
                 final String idUsuario = nombreUsuario.getText().toString();
                 final String contraseniaUsuario = contraseña.getText().toString();
@@ -60,6 +83,8 @@ public class LogInActivity extends AppCompatActivity {
                 if(idUsuario.isEmpty() || contraseniaUsuario.isEmpty()){
                     showMessage("Verifica los datos introducidos");
                     barraProgreso.setVisibility(View.INVISIBLE);
+                    btnAcceso.setVisibility(View.VISIBLE);
+                    btnRegistro.setVisibility(View.VISIBLE);
                 }else{
                     acceder(idUsuario, contraseniaUsuario);
                 }
@@ -73,17 +98,23 @@ public class LogInActivity extends AppCompatActivity {
 
     }
 
+    private void updateUI(GoogleSignInAccount account) {
+
+    }
+
     private void acceder(String idUsuario, String contraseniaUsuario) {
 
             mAuth.signInWithEmailAndPassword(idUsuario, contraseniaUsuario).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        //btnAcceso.setVisibility(View.VISIBLE);
+                        barraProgreso.setVisibility(View.VISIBLE);
+                        btnAcceso.setVisibility(View.INVISIBLE);
+                        btnRegistro.setVisibility(View.INVISIBLE);
                         actualizarUsuario();
                     }else{
                         showMessage(task.getException().getMessage());
-                        barraProgreso.setVisibility(View.INVISIBLE);
+
                     }
 
 

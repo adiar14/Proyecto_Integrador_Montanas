@@ -39,6 +39,14 @@
           }
         },
         {
+          "client_id": "622304902132-7skg3i1021ve03g2haig9i9vs925uil9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.adiar.proyecto_integrador_montanas",
+            "certificate_hash": "f9a3a436f613597b6a9b95bd57170829b710b8a4"
+          }
+        },
+        {
           "client_id": "622304902132-ehre378h4q4i3iqm4urojksd3br5s8vo.apps.googleusercontent.com",
           "client_type": 3
         }
