@@ -13,9 +13,14 @@ import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.example.adiar.proyecto_integrador_montanas.R;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.ActionCodeSettings;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -49,6 +54,21 @@ public class LogInActivity extends AppCompatActivity {
         homeActivity = new Intent(this, HomeActivity.class);
         registrerActivity = new Intent(this, RegisterActivity.class);
 
+        //GOOGLE AUTH
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        // Construye un GoogleSignInClient con las opciones especificadas por gso.
+        GoogleSignInClient mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        // Check for existing Google Sign In account, if the user is already signed in
+// the GoogleSignInAccount will be non-null.
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+        updateUI(account);
+
+
+
+        //aCCIONES DE LAS BARRAS DE PROGRESO
         barraProgreso.setVisibility(View.INVISIBLE);
         btnAcceso.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +95,10 @@ public class LogInActivity extends AppCompatActivity {
 
 
 
+
+    }
+
+    private void updateUI(GoogleSignInAccount account) {
 
     }
 
