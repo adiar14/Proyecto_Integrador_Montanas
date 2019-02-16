@@ -19,14 +19,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:toolbarId="@+id/toolbar">
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/navUsuarioImgPerfil"
-                android:layout_width="410dp"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="159dp"
                 app:lottie_autoPlay="true"
                 app:lottie_fileName="cocheTrip.json"
                 app:lottie_imageAssetsFolder="assets"
