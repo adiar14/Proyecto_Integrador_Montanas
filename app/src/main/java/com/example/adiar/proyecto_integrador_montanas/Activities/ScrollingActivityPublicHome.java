@@ -32,7 +32,7 @@ public class ScrollingActivityPublicHome extends AppCompatActivity {
                 Snackbar.make(view, "Accederas a las últimasnoticias para voluntarios", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
                 startActivity(voluntariosLogIn);
-
+                finish();
             }
         });
     }
