@@ -153,6 +153,8 @@
         android:layout_width="73dp"
         android:layout_height="86dp"
 
+        android:layout_x="174dp"
+        android:layout_y="470dp"
         app:layout_constraintBottom_toBottomOf="@+id/btnRegistrar"
         app:layout_constraintEnd_toEndOf="@+id/btnRegistrar"
         app:layout_constraintHorizontal_bias="0.444"
