@@ -4,7 +4,7 @@ apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.example.adiar.proyecto_integrador_montanas"
+        applicationId "com.naturex.adiar.proyecto_integrador_montanas"
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
