@@ -1,4 +1,4 @@
-package com.example.adiar.proyecto_integrador_montanas.Activities;
+package com.naturex.adiar.proyecto_integrador_montanas.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,12 +6,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
-
-import com.bumptech.glide.Glide;
-import com.example.adiar.proyecto_integrador_montanas.R;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -22,9 +16,14 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class HomeVoluntariosActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+import com.bumptech.glide.Glide;
+import com.naturex.adiar.proyecto_integrador_montanas.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
+public class HomeActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
+    private Intent LogActivity;
     FirebaseUser usuarioActual;
     private FirebaseAuth mAuth;
 
@@ -40,12 +39,12 @@ public class HomeVoluntariosActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+        //Activities
+        LogActivity = new Intent(this, LogInActivity.class);
         //Init Firebase
         mAuth = FirebaseAuth.getInstance();
         usuarioActual = mAuth.getCurrentUser();
-
-
-
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -83,7 +82,7 @@ public class HomeVoluntariosActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.activity_home_drawer, menu);
+        getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
 
@@ -123,13 +122,14 @@ public class HomeVoluntariosActivity extends AppCompatActivity
 
         }
 
+
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
     private void updateNavCabecero() {
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
 
         View actualizarCabecero = navigationView.getHeaderView(0);

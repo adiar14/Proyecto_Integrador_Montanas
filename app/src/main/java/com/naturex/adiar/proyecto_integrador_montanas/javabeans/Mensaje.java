@@ -1,4 +1,4 @@
-package com.example.adiar.proyecto_integrador_montanas.javabeans;
+package com.naturex.adiar.proyecto_integrador_montanas.javabeans;
 
 public class Mensaje {
     private String textoMsj;

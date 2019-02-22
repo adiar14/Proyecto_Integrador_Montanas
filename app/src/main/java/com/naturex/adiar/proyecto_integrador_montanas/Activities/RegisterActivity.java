@@ -1,4 +1,4 @@
-package com.example.adiar.proyecto_integrador_montanas.Activities;
+package com.naturex.adiar.proyecto_integrador_montanas.Activities;
 
 import android.Manifest;
 import android.content.Intent;
@@ -14,11 +14,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
-import com.example.adiar.proyecto_integrador_montanas.R;
+import com.naturex.adiar.proyecto_integrador_montanas.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;

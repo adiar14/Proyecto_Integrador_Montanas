@@ -1,4 +1,4 @@
-package com.example.adiar.proyecto_integrador_montanas.Activities;
+package com.naturex.adiar.proyecto_integrador_montanas.Activities;
 
 import android.os.Bundle;
 
@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 
-import com.example.adiar.proyecto_integrador_montanas.R;
+import com.naturex.adiar.proyecto_integrador_montanas.R;
 import com.google.firebase.FirebaseApp;
 
 

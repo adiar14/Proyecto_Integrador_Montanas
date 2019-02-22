@@ -47,6 +47,14 @@
           }
         },
         {
+          "client_id": "622304902132-ef3e77g11k9pu70l8978mu89cqeb9bej.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.adiar.proyecto_integrador_montanas",
+            "certificate_hash": "7a4304de57d997622f9e63d9b0a730c6b1070a23"
+          }
+        },
+        {
           "client_id": "622304902132-ehre378h4q4i3iqm4urojksd3br5s8vo.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -68,6 +76,37 @@
               "client_type": 3
             }
           ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622304902132:android:6bc7dabacba975fe",
+        "android_client_info": {
+          "package_name": "com.naturex.adiar.proyecto_integrador_montanas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "622304902132-ehre378h4q4i3iqm4urojksd3br5s8vo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiP6ZqKwIgkbHnxi4FVfOLgvaqw3NhDBY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2

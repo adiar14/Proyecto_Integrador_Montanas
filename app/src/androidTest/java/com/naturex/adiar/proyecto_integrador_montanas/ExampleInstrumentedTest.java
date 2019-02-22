@@ -1,4 +1,4 @@
-package com.example.adiar.proyecto_integrador_montanas;
+package com.naturex.adiar.proyecto_integrador_montanas;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
