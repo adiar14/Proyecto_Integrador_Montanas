@@ -36,7 +36,7 @@ public class SplashScreen extends Activity {
 
 
 
-        homePublicActivity = new Intent(this, RutasRecycler.class);
+        homePublicActivity = new Intent(this, HomeActivity.class);
 
 
 
