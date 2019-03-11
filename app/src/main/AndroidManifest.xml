@@ -27,6 +27,7 @@
         <activity android:name=".Activities.LogInActivity" />
         <activity android:name=".Activities.HomeVoluntariosActivity" />
         <activity android:name=".Activities.RegisterActivity" />
+        <activity android:name=".Activities.RutasRecycler" />
     </application>
 
 </manifest>
