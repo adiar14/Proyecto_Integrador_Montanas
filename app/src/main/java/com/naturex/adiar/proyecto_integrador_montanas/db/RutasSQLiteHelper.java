@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class RutasSQLiteHelper extends SQLiteOpenHelper {
 
     static final String DATABASE_NAME = "RUTAS";
-    static final int DATABASE_VERSION = 1;
+    static final int DATABASE_VERSION = 2;
     private ArrayList<Ruta> cargaInicial = new ArrayList<>();
     static final String CREATE_TABLE_RUTAS =
             "CREATE TABLE "+ RutaContract.RutaEntry.TABLE_NAME+ "( "+
@@ -44,11 +44,11 @@ public class RutasSQLiteHelper extends SQLiteOpenHelper {
 
     private void rellenarArray() {
 
-        cargaInicial.add(new Ruta("Pico de Abantos 1.763 m - desde San Lorenzo del Escorial (Monte Abantos)",  9.09, 709, "Fácil","img1", "Bajo"));
-        cargaInicial.add(new Ruta("Frente del Agua - Guerra Civil Española - Paredes de Buitrago  ",  16.19, 336, "Fácil","img2", "Medio"));
-        cargaInicial.add(new Ruta("Patones de Arriba al Cancho de la Cabeza - Circular",  11.06, 498, "Fácil","img3", "Bajo"));
-        cargaInicial.add(new Ruta("Cuerda Larga del Puerto Navacerrada al Puerto la Morcuera - (Sierra de Guadarrama)  ",  20.64, 1035, "Medio","img4", "Bajo"));
-        cargaInicial.add(new Ruta("Cercedilla a Bola del Mundo con Vivac, por las Cabrillas en la Barranca y vuelta por Siete Picos, Puricelli ",  37.98, 1806, "Difíci","img5", "Alto"));
+        cargaInicial.add(new Ruta("Pico de Abantos 1.763 m - desde San Lorenzo del Escorial (Monte Abantos)",  9.09, 709, "Fácil","/img1.jpg", "Bajo"));
+        cargaInicial.add(new Ruta("Frente del Agua - Guerra Civil Española - Paredes de Buitrago  ",  16.19, 336, "Fácil","/img2.jpg", "Medio"));
+        cargaInicial.add(new Ruta("Patones de Arriba al Cancho de la Cabeza - Circular",  11.06, 498, "Fácil","/img3.jpg", "Bajo"));
+        cargaInicial.add(new Ruta("Cuerda Larga del Puerto Navacerrada al Puerto la Morcuera - (Sierra de Guadarrama)  ",  20.64, 1035, "Medio","/img4.jpg", "Bajo"));
+        cargaInicial.add(new Ruta("Cercedilla a Bola del Mundo con Vivac, por las Cabrillas en la Barranca y vuelta por Siete Picos, Puricelli ",  37.98, 1806, "Difíci","/img5.jpg", "Alto"));
     }
 
     private void cargaDatosInicial(SQLiteDatabase db) {

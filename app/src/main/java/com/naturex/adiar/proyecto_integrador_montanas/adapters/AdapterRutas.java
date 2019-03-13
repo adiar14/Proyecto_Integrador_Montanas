@@ -36,9 +36,23 @@ public class AdapterRutas extends RecyclerView.Adapter<AdapterRutas.HolderRutas>
         holder.tvNombre.setText(listaRutas.get(i).getNombre());
         holder.tvLongitud.setText(String.valueOf(listaRutas.get(i).getLongitud()));
         holder.tvPendiente.setText(String.valueOf(listaRutas.get(i).getPendiente()));
+        holder.tvSuciedad.setText(listaRutas.get(i).getNivelSuciedad());
         holder.tvDificultad.setText(listaRutas.get(i).getDificultad());
-        Drawable img = Drawable.createFromPath(listaRutas.get(i).getImagen());
-        holder.ivImagen.setImageDrawable(img);
+        if(i==0){
+            holder.ivImagen.setImageResource(R.drawable.img4);
+        }
+        if(i==1){
+            holder.ivImagen.setImageResource(R.drawable.img5);
+        }
+        if(i==2){
+            holder.ivImagen.setImageResource(R.drawable.img3);
+        }
+        if(i==3){
+            holder.ivImagen.setImageResource(R.drawable.img4);
+        }
+        if(i==4){
+            holder.ivImagen.setImageResource(R.drawable.img5);
+        }
     }
 
     @Override
