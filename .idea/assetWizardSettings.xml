@@ -97,6 +97,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="scalingPercent" value="119" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -106,10 +107,7 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundLayerName" value="ic_launcher_background" />
-                                      <entry key="foregroundAssetType" value="CLIP_ART" />
-                                      <entry key="foregroundLayerName" value="ic_launcher_foreground" />
-                                      <entry key="outputName" value="ic_account_black" />
+                                      <entry key="foregroundImage" value="C:\Users\steve\StudioProjects\Proyecto_Integrador_Montanas\app\src\main\res\drawable\arbolfinalblanco.png" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -173,11 +171,6 @@
                                 </PersistentState>
                               </value>
                             </entry>
-                          </map>
-                        </option>
-                        <option name="values">
-                          <map>
-                            <entry key="outputIconType" value="ACTIONBAR" />
                           </map>
                         </option>
                       </PersistentState>
