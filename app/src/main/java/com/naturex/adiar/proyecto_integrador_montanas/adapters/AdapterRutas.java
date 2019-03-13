@@ -34,8 +34,8 @@ public class AdapterRutas extends RecyclerView.Adapter<AdapterRutas.HolderRutas>
     public void onBindViewHolder(@NonNull HolderRutas holder, int i) {
 
         holder.tvNombre.setText(listaRutas.get(i).getNombre());
-        holder.tvLongitud.setText(String.valueOf(listaRutas.get(i).getLongitud()));
-        holder.tvPendiente.setText(String.valueOf(listaRutas.get(i).getPendiente()));
+        /*holder.tvLongitud.setText(String.valueOf(listaRutas.get(i).getLongitud()));
+        holder.tvPendiente.setText(String.valueOf(listaRutas.get(i).getPendiente()));*/
         holder.tvSuciedad.setText(listaRutas.get(i).getNivelSuciedad());
         holder.tvDificultad.setText(listaRutas.get(i).getDificultad());
         if(i==0){
@@ -78,8 +78,8 @@ public class AdapterRutas extends RecyclerView.Adapter<AdapterRutas.HolderRutas>
         public HolderRutas(@NonNull View itemView) {
             super(itemView);
             tvNombre = itemView.findViewById(R.id.tvNombre);
-            tvPendiente = itemView.findViewById(R.id.tvPendiente);
-            tvLongitud = itemView.findViewById(R.id.tvLongitud);
+           /* tvPendiente = itemView.findViewById(R.id.tvPendiente);
+            tvLongitud = itemView.findViewById(R.id.tvLongitud);*/
             tvDificultad = itemView.findViewById(R.id.tvDificultad);
             tvSuciedad = itemView.findViewById(R.id.tvSuciedad);
             ivImagen = itemView.findViewById(R.id.ivImagen);
