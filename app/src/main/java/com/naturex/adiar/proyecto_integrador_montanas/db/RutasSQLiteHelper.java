@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class RutasSQLiteHelper extends SQLiteOpenHelper {
 
     static final String DATABASE_NAME = "RUTAS";
-    static final int DATABASE_VERSION = 2;
+    static final int DATABASE_VERSION = 3;
     private ArrayList<Ruta> cargaInicial = new ArrayList<>();
     static final String CREATE_TABLE_RUTAS =
             "CREATE TABLE "+ RutaContract.RutaEntry.TABLE_NAME+ "( "+
