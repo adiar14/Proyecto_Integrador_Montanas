@@ -139,10 +139,8 @@ public class HomeVoluntariosActivity extends AppCompatActivity
         navUsuarioImagen = actualizarCabecero.findViewById(R.id.navUsuarioImgPerfil);
 
 
-
         navNombreUsuario.setText(usuarioActual.getDisplayName());
         navUsuarioEmail.setText(usuarioActual.getEmail());
-
         Glide.with(this).load(usuarioActual.getPhotoUrl()).into(navUsuarioImagen);
     }
 }

@@ -6,23 +6,23 @@
     <group android:checkableBehavior="single">
     <item
         android:id="@+id/nav_cuenta"
-        android:icon="@drawable/ic_menu_camera"
-        android:title="Cuenta" />
+        android:icon="@drawable/ic_nuevo_account"
+        android:title="Ajustes de tu Cuenta" />
     <item
         android:id="@+id/nav_misGrupos"
-        android:icon="@drawable/ic_menu_gallery"
+        android:icon="@drawable/ic_nuevo_group"
         android:title="Mis Grupos" />
     <item
         android:id="@+id/nav_notificaciones"
-        android:icon="@drawable/ic_menu_slideshow"
+        android:icon="@drawable/ic_nuevo_notify"
         android:title="Notificaciones" />
     <item
         android:id="@+id/nav_ayuda"
-        android:icon="@drawable/ic_menu_manage"
+        android:icon="@drawable/ic_nuevo_ayuda"
         android:title="Ayuda" />
     <item
         android:id="@+id/nav_salir"
-        android:icon="@drawable/ic_menu_send"
+        android:icon="@drawable/ic_nuevo_exit"
         android:title="Salir" />
     </group>
 
