@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -26,6 +27,7 @@ public class LogInActivity extends AppCompatActivity implements GoogleApiClient.
     private EditText nombreUsuario, contraseña;
     private Button btnAcceso, btnRegistro;
     private LottieAnimationView barraProgreso;
+    private TextView missPass;
     //Conexion a firebase
     private FirebaseAuth mAuth;
     //lOG IN GOOGLE
@@ -33,9 +35,8 @@ public class LogInActivity extends AppCompatActivity implements GoogleApiClient.
     public static final int SING_IN_CODE = 777;
 
     //declaramos el intent al que queramos acceder
-    private Intent homeActivity;
+    private Intent homeVolunActivity, registrerActivity, restart;
     Toast toast;
-    private Intent registrerActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,13 +50,14 @@ public class LogInActivity extends AppCompatActivity implements GoogleApiClient.
         btnAcceso =findViewById(R.id.btnAcceso);
         btnRegistro = findViewById(R.id.btnAcceso2);
         barraProgreso =findViewById(R.id.logInBar);
+        missPass = findViewById(R.id.tvMissPass);
         //Inicializar Firebase
         mAuth = FirebaseAuth.getInstance();
 
         //Iniciar el activity
-        homeActivity = new Intent(this, HomeActivity.class);
+        homeVolunActivity= new Intent(this, HomeVoluntariosActivity.class);
         registrerActivity = new Intent(this, RegisterActivity.class);
-
+        restart = new Intent(this, LogInActivity.class);
         //gOOGLE
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -93,6 +95,8 @@ public class LogInActivity extends AppCompatActivity implements GoogleApiClient.
                 barraProgreso.setVisibility(View.VISIBLE);
                 btnAcceso.setVisibility(View.INVISIBLE);
                 btnRegistro.setVisibility(View.INVISIBLE);
+                missPass.setVisibility(View.INVISIBLE);
+
 
                 final String idUsuario = nombreUsuario.getText().toString();
                 final String contraseniaUsuario = contraseña.getText().toString();
@@ -131,7 +135,7 @@ public class LogInActivity extends AppCompatActivity implements GoogleApiClient.
                         actualizarUsuario();
                     }else{
                         showMessage(task.getException().getMessage());
-
+                        iniciarDeNuevo();
                     }
 
 
@@ -140,15 +144,14 @@ public class LogInActivity extends AppCompatActivity implements GoogleApiClient.
     }
 
     private void actualizarUsuario() {
-        startActivity(homeActivity);
+        startActivity(homeVolunActivity);
         finish();
-
     }
 
     private void showMessage(String s) {
         if (toast != null)
             toast.cancel();
-        toast = Toast.makeText(this, s, Toast.LENGTH_LONG);
+        toast = Toast.makeText(this, "No hay una cuenta asociada a este email", Toast.LENGTH_LONG);
         toast.show();
     }
 
@@ -160,5 +163,9 @@ public class LogInActivity extends AppCompatActivity implements GoogleApiClient.
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
         
+    }
+    private void iniciarDeNuevo() {
+        startActivity(restart);
+        finish();
     }
 }

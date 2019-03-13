@@ -50,7 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
         userEmail = findViewById(R.id.regEmail);
         userName = findViewById(R.id.regName);
         userPassword = findViewById(R.id.regPass1);
-        userPassword2 = findViewById(R.id.regpass2);
+        userPassword2 = findViewById(R.id.regPass2);
         loadingProgress = findViewById(R.id.regProBar);
         //Iniciar el activity
 
@@ -119,6 +119,7 @@ public class RegisterActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             showMessage("Cuenta creada");
                             updateToUserInfo(name,pickedUmgUri,mAuth.getCurrentUser());
+                            updateUri();
 
                         } else {
                             showMessage("No se ha podido crear" + task.getException().getMessage());
@@ -154,7 +155,7 @@ public class RegisterActivity extends AppCompatActivity {
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if(task.isSuccessful()){
                                                 showMessage("Registro completo");
-                                                updateUri();
+
                                             }
                                         }
                                     });
@@ -166,8 +167,8 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void updateUri() {
-        Intent homeActivity = new Intent(getApplicationContext(), HomeActivity.class);
-        startActivity(homeActivity);
+        Intent LogInActivity = new Intent(getApplicationContext(), LogInActivity.class);
+        startActivity(LogInActivity);
         finish();
     }
 

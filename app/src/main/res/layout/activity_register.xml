@@ -1,179 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/grad_bg"
+    android:background="@drawable/back_dark_new"
     tools:context=".Activities.RegisterActivity"
     android:orientation="vertical">
-
-    <ImageView
-        android:id="@+id/regUserImage"
-        android:layout_width="137dp"
-        android:layout_height="134dp"
-        android:layout_marginStart="97dp"
-        android:layout_marginLeft="97dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="98dp"
-        android:layout_marginRight="98dp"
-        android:layout_marginBottom="40dp"
-        android:layout_x="139dp"
-        android:layout_y="75dp"
-        android:src="@drawable/userphoto"
-        app:layout_constraintBottom_toTopOf="@+id/regName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.405"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="190dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="365dp" />
-
-    <EditText
-        android:id="@+id/regName"
-        android:layout_width="246dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="30dp"
-        android:layout_x="92dp"
-        android:layout_y="230dp"
-        android:background="@drawable/reg_edittext_style"
-        android:ems="10"
-        android:hint="Nombre"
-        android:inputType="textPersonName"
-        android:textCursorDrawable="@null"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/regEmail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regUserImage" />
-
-    <EditText
-        android:id="@+id/regEmail"
-        android:layout_width="246dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="30dp"
-        android:layout_x="91dp"
-        android:layout_y="287dp"
-        android:background="@drawable/reg_edittext_style"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:textCursorDrawable="@null"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/regPass1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regName" />
-
-    <EditText
-        android:id="@+id/regPass1"
-        android:layout_width="246dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="87dp"
-        android:layout_marginLeft="87dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginRight="88dp"
-        android:layout_marginBottom="30dp"
-        android:layout_x="94dp"
-        android:layout_y="346dp"
-        android:background="@drawable/reg_edittext_style"
-        android:ems="10"
-        android:hint="Contraseña"
-        android:inputType="textPassword"
-        android:textCursorDrawable="@null"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/regpass2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regEmail"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/regpass2"
-        android:layout_width="246dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginLeft="88dp"
-        android:layout_marginEnd="87dp"
-        android:layout_marginRight="87dp"
-        android:layout_marginBottom="30dp"
-        android:layout_x="94dp"
-        android:layout_y="407dp"
-        android:background="@drawable/reg_edittext_style"
-        android:ems="10"
-        android:hint="ConfirmContra"
-        android:inputType="textPassword"
-        android:textCursorDrawable="@null"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnRegistrar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regPass1"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btnRegistrar"
-        android:layout_width="246dp"
-        android:layout_height="wrap_content"
-        android:layout_x="96dp"
-        android:layout_y="483dp"
-        android:background="@drawable/btn_principales_style"
-        android:text="REGISTRARSE"
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="589dp" />
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/regProBar"
-        android:layout_width="73dp"
-        android:layout_height="86dp"
-
-        app:layout_constraintBottom_toBottomOf="@+id/btnRegistrar"
-        app:layout_constraintEnd_toEndOf="@+id/btnRegistrar"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="@+id/btnRegistrar"
-        app:layout_constraintTop_toTopOf="@+id/btnRegistrar"
-        app:layout_constraintVertical_bias="0.545"
-        app:lottie_autoPlay="true"
-        app:lottie_fileName="loadingcircular.json"
-        app:lottie_imageAssetsFolder="assets"
-        app:lottie_loop="true" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="126dp"
-        android:layout_marginLeft="126dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="152dp"
-        android:layout_marginRight="152dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:layout_x="127dp"
         android:layout_y="0dp"
         android:fontFamily="@font/annie_use_your_telescope"
@@ -183,9 +27,195 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/regUserImage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-</AbsoluteLayout>
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/regUserImage"
+        android:layout_width="142dp"
+        android:layout_height="174dp"
+        android:layout_above="@+id/scrollView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_x="139dp"
+        android:layout_y="75dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/userphoto"
+        app:civ_border_color="#ffffff"
+        app:civ_border_width="5dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#FFF"
+        app:civ_shadow_radius="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,NotSibling"
+        tools:layout_editor_absoluteY="133dp" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        style="@style/LayoutMargin"
+        android:layout_width="348dp"
+        android:layout_height="320dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regUserImage"
+        tools:ignore="UnknownId">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="315dp"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@android:color/background_light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/regName"
+                    style="@drawable/btn_principales_style"
+                    android:layout_width="366dp"
+                    android:layout_height="43dp"
+                    android:backgroundTint="@android:color/background_light"
+                    android:drawableStart="@drawable/ic_email_black_24dp"
+                    android:drawableLeft="@drawable/ic_email_black_24dp"
+                    android:gravity="start|top"
+                    android:hint="@string/name"
+                    android:textColor="@android:color/background_light"
+                    android:textColorHint="@android:color/background_light"
+                    android:textColorLink="@color/colorPrimaryDark"
+                    tools:ignore="DuplicateIds" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@android:color/background_light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/regEmail"
+                    style="@drawable/btn_principales_style"
+                    android:layout_width="366dp"
+                    android:layout_height="43dp"
+                    android:backgroundTint="@android:color/background_light"
+                    android:drawableStart="@drawable/ic_email_black_24dp"
+                    android:drawableLeft="@drawable/ic_email_black_24dp"
+                    android:gravity="start|top"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@android:color/background_light"
+                    android:textColorHint="@android:color/background_light"
+                    android:textColorLink="@color/colorPrimaryDark"
+                    tools:ignore="DuplicateIds" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputContra1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@android:color/background_light"
+                tools:ignore="DuplicateIds">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/regPass1"
+                    style="@drawable/btn_principales_style"
+                    android:layout_width="369dp"
+                    android:layout_height="45dp"
+                    android:backgroundTint="@android:color/background_light"
+                    android:drawableStart="@drawable/ic_lock_black_24dp"
+                    android:drawableLeft="@drawable/ic_lock_black_24dp"
+                    android:gravity="start|top"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:textColor="@android:color/background_light"
+                    android:textColorHint="@android:color/background_light"
+                    android:textColorLink="@color/colorPrimaryDark" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputContra2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@android:color/background_light"
+                tools:ignore="DuplicateIds">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/regPass2"
+                    style="@drawable/btn_principales_style"
+                    android:layout_width="369dp"
+                    android:layout_height="45dp"
+                    android:backgroundTint="@android:color/background_light"
+                    android:drawableStart="@drawable/ic_lock_black_24dp"
+                    android:drawableLeft="@drawable/ic_lock_black_24dp"
+                    android:gravity="start|top"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:textColor="@android:color/background_light"
+                    android:textColorHint="@android:color/background_light"
+                    android:textColorLink="@color/colorPrimaryDark" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnRegistrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_x="96dp"
+                android:layout_y="483dp"
+                android:background="@drawable/btn_principales_style"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:text="REGISTRARSE"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="129dp"
+                tools:layout_editor_absoluteY="589dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/regProBar"
+        android:layout_width="73dp"
+        android:layout_height="86dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_x="188dp"
+        android:layout_y="480dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="loadingcircular.json"
+        app:lottie_imageAssetsFolder="assets"
+        app:lottie_loop="true" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -35,11 +35,12 @@ dependencies {
     //Firebase storage
     implementation 'com.google.firebase:firebase-storage:16.0.1'
 
-    //Librerias de las imagenes
+    //Librerias para imacenes circulares
+    implementation 'com.mikhaellopez:circularimageview:3.2.0'
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
 
-
+    //Librerias de animacion con Lottie
     implementation 'com.airbnb.android:lottie:2.1.0'
 
     implementation 'com.android.support:design:27.1.1'

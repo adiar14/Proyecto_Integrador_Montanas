@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Handler;
 import android.support.annotation.RequiresApi;
+import android.support.constraint.ConstraintLayout;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -42,7 +43,7 @@ public class SplashScreen extends Activity {
 
        // TextView myTitle = (TextView)findViewById(R.id.textView3);
         ImageView imagen = (ImageView)findViewById(R.id.imagen_logo_inicio);
-        RelativeLayout layout = (RelativeLayout)findViewById(R.id.layout_splash_inicio);
+        ConstraintLayout layout = (ConstraintLayout) findViewById(R.id.layout_splash_inicio);
        // ImageView myImage = (ImageView)findViewById(R.id.imageView);
 
 //        // sets a Pretty Custom Font

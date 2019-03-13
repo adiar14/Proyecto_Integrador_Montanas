@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Proyecto_Integrador_Montanas</string>
+    <string name="app_name">NatureX</string>
     <string name="tv_tituloAcceso">ACCEDER</string>
     <string name="permisoIMG">Porfa dejama robalte...el corason!!</string>
-    <string name="titulo">natureX</string>
+    <string name="titulo">NatureX</string>
     <string name="title_activity_prueba_log_in">Sign in</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -30,5 +30,10 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_home_voluntarios">HomeVoluntariosActivity</string>
+    <string name="title_activity_home_voluntarios">NatureX Voluntarios</string>
+    <string name="email">Email</string>
+    <string name="password">Contraseña</string>
+    <string name="no_eres_usuario_registrate">¿No eres usuario? Registrate</string>
+    <string name="miss_passw">¿Has olvidado tu contraseña?</string>
+    <string name="name">Nombre</string>
 </resources>

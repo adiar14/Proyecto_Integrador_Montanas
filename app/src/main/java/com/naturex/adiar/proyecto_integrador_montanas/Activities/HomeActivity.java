@@ -31,7 +31,7 @@ import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private Intent LogActivity;
+    private Intent LogIn;
 
     private LinearLayoutManager lr;
     ArrayList<Ruta> listaRutas;
@@ -61,7 +61,7 @@ public class HomeActivity extends AppCompatActivity
         recyclerViewRuta.setHasFixedSize(true);
 
         //Activities
-        LogActivity = new Intent(this, LogInActivity.class);
+        LogIn = new Intent(this, LogInActivity.class);
 
 
 
@@ -126,7 +126,8 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_cuenta){
-            // Handle the camera action
+            startActivity(LogIn);
+            finish();
         } else if (id == R.id.nav_misGrupos) {
 
         } else if (id == R.id.nav_notificaciones) {
