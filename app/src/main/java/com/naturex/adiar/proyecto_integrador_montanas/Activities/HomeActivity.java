@@ -32,8 +32,7 @@ import java.util.ArrayList;
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private Intent LogActivity;
-    FirebaseUser usuarioActual;
-    private FirebaseAuth mAuth;
+
     private LinearLayoutManager lr;
     ArrayList<Ruta> listaRutas;
     RecyclerView recyclerViewRuta;
@@ -41,9 +40,7 @@ public class HomeActivity extends AppCompatActivity
     RutaDataSource rms;
     ConexionSQLiteHelper conn;
 
-    TextView navNombreUsuario;
-    TextView navUsuarioEmail;
-    ImageView navUsuarioImagen;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +48,8 @@ public class HomeActivity extends AppCompatActivity
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        //Carga del reciclerView con los datos almacenados
         listaRutas = new ArrayList<>();
         rms = new RutaDataSource(this);
         listaRutas=rms.consultarRuta();
@@ -63,9 +62,7 @@ public class HomeActivity extends AppCompatActivity
 
         //Activities
         LogActivity = new Intent(this, LogInActivity.class);
-        //Init Firebase
-        mAuth = FirebaseAuth.getInstance();
-        usuarioActual = mAuth.getCurrentUser();
+
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -85,7 +82,7 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        updateNavCabecero();
+
     }
 
 
@@ -150,20 +147,5 @@ public class HomeActivity extends AppCompatActivity
         return true;
     }
 
-    private void updateNavCabecero() {
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
 
-        View actualizarCabecero = navigationView.getHeaderView(0);
-
-        navNombreUsuario = actualizarCabecero.findViewById(R.id.navUsuarioNombre);
-        navUsuarioEmail = actualizarCabecero.findViewById(R.id.navUsuarioEmail);
-        navUsuarioImagen = actualizarCabecero.findViewById(R.id.navUsuarioImgPerfil);
-
-
-
-        navNombreUsuario.setText(usuarioActual.getDisplayName());
-        navUsuarioEmail.setText(usuarioActual.getEmail());
-
-        Glide.with(this).load(usuarioActual.getPhotoUrl()).into(navUsuarioImagen);
-    }
 }
