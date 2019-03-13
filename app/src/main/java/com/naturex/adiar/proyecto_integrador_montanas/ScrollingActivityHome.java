@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 
 import com.naturex.adiar.proyecto_integrador_montanas.adapters.AdapterRutas;
 import com.naturex.adiar.proyecto_integrador_montanas.db.RutaDataSource;
@@ -18,6 +19,7 @@ import com.naturex.adiar.proyecto_integrador_montanas.utilities.ConexionSQLiteHe
 import java.util.ArrayList;
 
 public class ScrollingActivityHome extends AppCompatActivity {
+    private EditText nombre;
     private LinearLayoutManager lr;
     ArrayList<Ruta> listaRutas;
     RecyclerView recyclerViewRuta;

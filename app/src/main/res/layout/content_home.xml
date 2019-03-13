@@ -8,5 +8,5 @@
     tools:context=".Activities.HomeActivity"
     android:background="@drawable/back_general_style"
     tools:showIn="@layout/app_bar_home">
-
+    <!--lalalala-->
 </android.support.constraint.ConstraintLayout>

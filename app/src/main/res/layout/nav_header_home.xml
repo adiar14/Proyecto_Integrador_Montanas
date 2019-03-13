@@ -9,6 +9,7 @@
     android:padding="@dimen/PADDING_10"
     android:paddingBottom="50dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    <!--lalalala-->
     <com.mikhaellopez.circularimageview.CircularImageView
         android:id="@+id/navUsuarioImgPerfil"
         android:layout_width="96dp"

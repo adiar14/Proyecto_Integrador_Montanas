@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back_general_style">
-
+    <!--lalalala-->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvRutasdas"
         android:layout_width="match_parent"
