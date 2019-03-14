@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class RutasSQLiteHelper extends SQLiteOpenHelper {
 
     static final String DATABASE_NAME = "RUTAS";
-    static final int DATABASE_VERSION = 3;
+    static final int DATABASE_VERSION = 4;
     private ArrayList<Ruta> cargaInicial = new ArrayList<>();
     static final String CREATE_TABLE_RUTAS =
             "CREATE TABLE "+ RutaContract.RutaEntry.TABLE_NAME+ "( "+
@@ -44,11 +44,11 @@ public class RutasSQLiteHelper extends SQLiteOpenHelper {
 
     private void rellenarArray() {
 
-        cargaInicial.add(new Ruta("Pico de Abantos",  9.09, 709, "Fácil","/img1.jpg", "Bajo"));
-        cargaInicial.add(new Ruta("Frente del Agua",  16.19, 336, "Fácil","/img2.jpg", "Medio"));
-        cargaInicial.add(new Ruta("Patones de Arriba",  11.06, 498, "Fácil","/img3.jpg", "Bajo"));
-        cargaInicial.add(new Ruta("Cuerda Larga",  20.64, 1035, "Medio","/img4.jpg", "Bajo"));
-        cargaInicial.add(new Ruta("Bola del Mundo",  37.98, 1806, "Difíci","/img5.jpg", "Alto"));
+        cargaInicial.add(new Ruta("Pico de Abantos",  9.09, 709, "Dificultad: Fácil","/img1.jpg", "Nvl.Suciedad: Bajo"));
+        cargaInicial.add(new Ruta("Frente del Agua",  16.19, 336, "Dificultad: Fácil","/img2.jpg", "Nvl.Suciedad: Medio"));
+        cargaInicial.add(new Ruta("Patones de Arriba",  11.06, 498, "Dificultad: Fácil","/img3.jpg", "Nvl.Suciedad: Bajo"));
+        cargaInicial.add(new Ruta("Cuerda Larga",  20.64, 1035, "Dificultad: Medio","/img4.jpg", "Nvl.Suciedad: Bajo"));
+        cargaInicial.add(new Ruta("Bola del Mundo",  37.98, 1806, "Dificultad: Difícil","/img5.jpg", "Nvl.Suciedad: Alto"));
     }
 
     private void cargaDatosInicial(SQLiteDatabase db) {

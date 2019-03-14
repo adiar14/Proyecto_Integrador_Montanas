@@ -5,19 +5,19 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_cuentaV"
             android:icon="@drawable/ic_nuevo_account"
             android:title="Acceso a voluntarios" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_likes"
             android:icon="@drawable/ic_favoritos"
             android:title="Favoritos" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_sugerencias"
             android:icon="@drawable/ic_sugerencias"
             android:title="Sugerencias" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_ajustes"
             android:icon="@drawable/ic_menu_manage"
             android:title="Ajustes" />
     </group>
