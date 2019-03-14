@@ -30,7 +30,7 @@
         <activity android:name=".Activities.HomeVoluntariosActivity" />
         <activity android:name=".Activities.RegisterActivity" />
         <activity android:name=".Activities.AltaIncidencia" />
-        <activity android:name=".Activities.RutasRecycler" />
+        <activity android:name=".Activities.IncidenciasRecycler" />
         <activity android:name=".Activities.ScrollingActivityHome" />
     </application>
 
