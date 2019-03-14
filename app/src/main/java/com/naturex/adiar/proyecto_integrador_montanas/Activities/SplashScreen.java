@@ -35,7 +35,7 @@ public class SplashScreen extends Activity {
 
 
 
-        homePublicActivity = new Intent(this, AltaIncidencia.class);
+        homePublicActivity = new Intent(this, LogInActivity.class);
 
 
 

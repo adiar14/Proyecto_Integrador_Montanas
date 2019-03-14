@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Activities.HomeActivity"
-    android:background="@drawable/back_general_style"
     tools:showIn="@layout/app_bar_home">
     <!--lalalala-->
 </android.support.constraint.ConstraintLayout>

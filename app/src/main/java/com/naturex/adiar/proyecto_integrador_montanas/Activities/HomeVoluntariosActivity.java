@@ -7,6 +7,7 @@ import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.bumptech.glide.Glide;
 import com.naturex.adiar.proyecto_integrador_montanas.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -48,7 +49,7 @@ public class HomeVoluntariosActivity extends AppCompatActivity
 
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        LottieAnimationView fab = (LottieAnimationView) findViewById(R.id.fabAniadir);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -95,13 +96,14 @@ public class HomeVoluntariosActivity extends AppCompatActivity
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+       /* int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.navig) {
             return true;
         }
 
+        */
         return super.onOptionsItemSelected(item);
     }
 

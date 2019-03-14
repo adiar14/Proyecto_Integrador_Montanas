@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back_general_style"
+    android:background="@color/white"
     tools:context=".Activities.HomeVoluntariosActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -27,8 +27,8 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/fabAniadir"
-        android:layout_width="117dp"
-        android:layout_height="97dp"
+        android:layout_width="77dp"
+        android:layout_height="78dp"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         android:layout_marginBottom="8dp"
@@ -42,5 +42,5 @@
         app:lottie_autoPlay="true"
         app:lottie_fileName="animacionPlanta.json"
         app:lottie_imageAssetsFolder="assets"
-        app:lottie_loop="false" />
+        app:lottie_loop="true" />
 </android.support.design.widget.CoordinatorLayout>
