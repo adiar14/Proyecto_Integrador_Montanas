@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back_general_style"
     tools:context=".Activities.HomeVoluntariosActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -15,19 +16,31 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="?attr/colorControlActivated"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_home_voluntarios" />
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_home_voluntarios" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/fabAniadir"
+        android:layout_width="117dp"
+        android:layout_height="97dp"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
-
+        android:layout_marginBottom="8dp"
+        android:layout_x="116dp"
+        android:layout_y="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.298"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.473"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="animacionPlanta.json"
+        app:lottie_imageAssetsFolder="assets"
+        app:lottie_loop="false" />
 </android.support.design.widget.CoordinatorLayout>

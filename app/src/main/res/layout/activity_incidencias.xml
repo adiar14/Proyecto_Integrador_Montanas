@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back_dark_new"
+    android:background="@drawable/back_general_style"
     android:orientation="vertical"
     tools:context=".Activities.AltaIncidencia">
 
@@ -105,7 +105,7 @@
                     android:id="@+id/etDescripcionIncidencia"
                     style="@drawable/btn_principales_style"
                     android:layout_width="366dp"
-                    android:layout_height="43dp"
+                    android:layout_height="54dp"
                     android:backgroundTint="@android:color/background_light"
                     android:gravity="start|top"
                     android:hint="@string/email"
@@ -113,6 +113,7 @@
                     android:textColor="@android:color/background_light"
                     android:textColorHint="@android:color/background_light"
                     android:textColorLink="@color/colorPrimaryDark"
+                    android:textSize="26sp"
                     tools:ignore="DuplicateIds" />
             </android.support.design.widget.TextInputLayout>
 
@@ -144,7 +145,7 @@
                 android:fontFamily="@font/annie_use_your_telescope"
                 android:text="Subir"
                 android:textColor="#ffffff"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="129dp"

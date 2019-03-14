@@ -31,7 +31,6 @@
         <activity android:name=".Activities.RegisterActivity" />
         <activity android:name=".Activities.AltaIncidencia" />
         <activity android:name=".Activities.IncidenciasRecycler" />
-        <activity android:name=".Activities.ScrollingActivityHome" />
     </application>
 
 </manifest>
