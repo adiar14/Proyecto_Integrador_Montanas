@@ -5,6 +5,9 @@ public class Incidencia {
     String imagen;
     String id;
 
+    public Incidencia() {
+    }
+
     public Incidencia(String descripcion, String imagen) {
         this.descripcion = descripcion;
         this.imagen=imagen;
