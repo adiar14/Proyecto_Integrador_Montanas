@@ -12,12 +12,10 @@ import android.support.constraint.ConstraintLayout;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
 
 import com.naturex.adiar.proyecto_integrador_montanas.R;
 import com.google.firebase.FirebaseApp;
-
 
 
 public class SplashScreen extends Activity {
@@ -37,7 +35,7 @@ public class SplashScreen extends Activity {
 
 
 
-        homePublicActivity = new Intent(this, HomeActivity.class);
+        homePublicActivity = new Intent(this, AltaIncidencia.class);
 
 
 

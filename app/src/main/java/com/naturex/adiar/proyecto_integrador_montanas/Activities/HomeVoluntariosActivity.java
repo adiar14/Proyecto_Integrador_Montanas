@@ -69,7 +69,10 @@ public class HomeVoluntariosActivity extends AppCompatActivity
     }
 
 
-
+    public void incidencias(View v){
+        Intent i = new Intent(this, Incidencias.class);
+        startActivity(i);
+    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
