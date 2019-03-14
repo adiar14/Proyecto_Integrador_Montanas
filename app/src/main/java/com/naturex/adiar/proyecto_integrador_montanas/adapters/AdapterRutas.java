@@ -1,6 +1,5 @@
 package com.naturex.adiar.proyecto_integrador_montanas.adapters;
 
-import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -77,12 +76,12 @@ public class AdapterRutas extends RecyclerView.Adapter<AdapterRutas.HolderRutas>
 
         public HolderRutas(@NonNull View itemView) {
             super(itemView);
-            tvNombre = itemView.findViewById(R.id.tvNombre);
+            tvNombre = itemView.findViewById(R.id.tvDescripcionIncidenciaContent);
            /* tvPendiente = itemView.findViewById(R.id.tvPendiente);
             tvLongitud = itemView.findViewById(R.id.tvLongitud);*/
             tvDificultad = itemView.findViewById(R.id.tvDificultad);
             tvSuciedad = itemView.findViewById(R.id.tvSuciedad);
-            ivImagen = itemView.findViewById(R.id.ivImagen);
+            ivImagen = itemView.findViewById(R.id.ivImagenIncidenciaContent);
         }
     }
 

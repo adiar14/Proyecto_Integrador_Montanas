@@ -94,7 +94,7 @@ public class RegisterActivity extends AppCompatActivity {
 
 
         //acceso a la imagen
-        imgUsuario = findViewById(R.id.regUserImage);
+        imgUsuario = findViewById(R.id.regIncidenciaImagen);
         imgUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -91,6 +91,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "622304902132-evtu65k2qv2fv84avc8hpvohvsbjpr16.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.naturex.adiar.proyecto_integrador_montanas",
+            "certificate_hash": "f9a3a436f613597b6a9b95bd57170829b710b8a4"
+          }
+        },
+        {
           "client_id": "622304902132-ehre378h4q4i3iqm4urojksd3br5s8vo.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -105,8 +113,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "622304902132-ehre378h4q4i3iqm4urojksd3br5s8vo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

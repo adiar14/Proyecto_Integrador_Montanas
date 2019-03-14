@@ -1,4 +1,4 @@
-package com.naturex.adiar.proyecto_integrador_montanas;
+package com.naturex.adiar.proyecto_integrador_montanas.Activities;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 
+import com.naturex.adiar.proyecto_integrador_montanas.R;
 import com.naturex.adiar.proyecto_integrador_montanas.adapters.AdapterRutas;
 import com.naturex.adiar.proyecto_integrador_montanas.db.RutaDataSource;
 import com.naturex.adiar.proyecto_integrador_montanas.javabeans.Ruta;
@@ -40,7 +41,7 @@ public class ScrollingActivityHome extends AppCompatActivity {
         listaRutas = new ArrayList<>();
         rms = new RutaDataSource(this);
         listaRutas=rms.consultarRuta();
-        recyclerViewRuta = findViewById(R.id.rvRutas);
+        recyclerViewRuta = findViewById(R.id.rvRutass);
         lr = new LinearLayoutManager(this);
         recyclerViewRuta.setLayoutManager(lr);
         adapter = new AdapterRutas(listaRutas);

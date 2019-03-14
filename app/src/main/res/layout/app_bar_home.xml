@@ -31,7 +31,7 @@
         app:srcCompat="@drawable/arbol_sin_fondo" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvRutas"
+        android:id="@+id/rvIncidencias"
         android:layout_width="match_parent"
         android:layout_height="516dp"
         android:layout_marginTop="50dp" />
