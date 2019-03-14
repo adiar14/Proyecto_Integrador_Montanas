@@ -23,7 +23,7 @@ public class AdapterIncidencia extends RecyclerView.Adapter{
         public IncidenciaViewHolder(View itemView) {
             super(itemView);
 
-            tv
+
         }
     }
 }
