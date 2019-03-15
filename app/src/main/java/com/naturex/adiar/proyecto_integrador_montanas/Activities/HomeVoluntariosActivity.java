@@ -89,7 +89,7 @@ public class HomeVoluntariosActivity extends AppCompatActivity
     }
 
 
-    public void incidencias(View v){
+    public void incidenciasHomeActivity(View v){
         Intent i = new Intent(this, AltaIncidencia.class);
         startActivity(i);
     }
