@@ -66,13 +66,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
 
 
-        Button fab = (Button) findViewById(R.id.btnAniadirIncidencias);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                incidencias(view);
-            }
-        });
 
 
 
@@ -151,7 +144,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-    public void incidencias(View v){
+    public void incidenciasHomeActivity(View v){
         Intent i = new Intent(this, AltaIncidencia.class);
         startActivity(i);
     }
