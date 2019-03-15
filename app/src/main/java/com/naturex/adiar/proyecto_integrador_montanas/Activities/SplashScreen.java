@@ -70,7 +70,7 @@ public class SplashScreen extends Activity {
                 startActivity(homePublicActivity);
                 finish();
             }
-        }, 1000);
+        }, 3000);
     }
 
 }

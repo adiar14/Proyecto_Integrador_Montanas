@@ -53,8 +53,7 @@ public class HomeVoluntariosActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                incidencias(view);
             }
         });
 
@@ -71,7 +70,7 @@ public class HomeVoluntariosActivity extends AppCompatActivity
 
 
     public void incidencias(View v){
-        Intent i = new Intent(this, Incidencias.class);
+        Intent i = new Intent(this, AltaIncidencia.class);
         startActivity(i);
     }
     @Override

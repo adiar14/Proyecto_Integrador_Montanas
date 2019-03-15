@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -65,14 +66,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
 
 
-       /* LottieAnimationView fab = (LottieAnimationView) findViewById(R.id.fabBuscar);
+        Button fab = (Button) findViewById(R.id.btnAniadirIncidencias);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                incidencias(view);
             }
-        });*/
+        });
 
 
 
@@ -151,5 +151,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-
+    public void incidencias(View v){
+        Intent i = new Intent(this, AltaIncidencia.class);
+        startActivity(i);
+    }
 }

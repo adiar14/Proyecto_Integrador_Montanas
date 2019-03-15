@@ -28,22 +28,13 @@
         android:layout_height="684dp"
         android:layout_gravity="bottom" />
 
-<!--    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/fabBuscar"
-        android:layout_width="77dp"
-        android:layout_height="78dp"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:layout_marginBottom="8dp"
-        android:layout_x="116dp"
-        android:layout_y="80dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.298"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.473"
-        app:lottie_autoPlay="true"
-        app:lottie_fileName="animacionPlanta.json"
-        app:lottie_imageAssetsFolder="assets"
-        app:lottie_loop="true" />-->
+    <Button
+        android:id="@+id/btnAniadirIncidencias"
+        android:layout_width="wrap_content"
+        android:layout_height="77dp"
+        android:background="@android:drawable/ic_input_add"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="bottom|center" />
+
+
 </android.support.design.widget.CoordinatorLayout>

@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.ChildEventListener;
@@ -44,6 +45,8 @@ public class AltaIncidencia  extends AppCompatActivity {
     private Button btn;
     private FirebaseStorage storage;
     private StorageReference storageReference;
+    private LottieAnimationView loadingProgress;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_incidencias);
@@ -51,6 +54,8 @@ public class AltaIncidencia  extends AppCompatActivity {
         storageReference=storage.getReference();
         btn = findViewById(R.id.btnAltaIncidencia);
         etDesc = findViewById(R.id.etDescripcionIncidencia);
+        loadingProgress = findViewById(R.id.regProBarIncidencias);
+        loadingProgress.setVisibility(View.INVISIBLE);
         dbR = FirebaseDatabase.getInstance().getReference().child("incidencia");
         imagenIncidencia = findViewById(R.id.regIncidenciaImagen);
         imagenIncidencia.setOnClickListener(new View.OnClickListener() {
@@ -109,6 +114,7 @@ public class AltaIncidencia  extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                             @Override
                             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                loadingProgress.setVisibility(View.VISIBLE);
                                 progressDialog.dismiss();
                                 Toast.makeText(AltaIncidencia.this, "Uploaded", Toast.LENGTH_SHORT).show();
                                 String clave = dbR.push().getKey();
