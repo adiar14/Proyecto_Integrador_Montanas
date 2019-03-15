@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.google.firebase.auth.FirebaseUser;
 import com.naturex.adiar.proyecto_integrador_montanas.R;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;

@@ -36,7 +36,7 @@ public class IncidenciasRecycler extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_incidencias_recycler);
+        setContentView(R.layout.activity_incidencias);
         datos = new ArrayList<Incidencia>();
         adapter = new AdapterIncidencia(datos, this);
         rv = findViewById(R.id.rvIncidencias);
