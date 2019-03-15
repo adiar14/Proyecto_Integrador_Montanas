@@ -39,7 +39,7 @@ public class IncidenciasRecycler extends AppCompatActivity {
         setContentView(R.layout.activity_incidencias);
         datos = new ArrayList<Incidencia>();
         adapter = new AdapterIncidencia(datos, this);
-        rv = findViewById(R.id.rvIncidencias);
+        rv = findViewById(R.id.rvRutas);
 
 
         ll = new LinearLayoutManager(this);

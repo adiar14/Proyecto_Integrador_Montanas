@@ -22,7 +22,7 @@
 
     <include layout="@layout/content_home" />
 
-    <com.airbnb.lottie.LottieAnimationView
+    <!--<com.airbnb.lottie.LottieAnimationView
         android:id="@+id/fabAniadir"
         android:layout_width="130dp"
         android:layout_height="133dp"
@@ -39,10 +39,10 @@
         app:lottie_autoPlay="true"
         app:lottie_fileName="busquedaPlaneta.json"
         app:lottie_imageAssetsFolder="assets"
-        app:lottie_loop="false" />
+        app:lottie_loop="false" />-->
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvIncidencias"
+        android:id="@+id/rvRutasdas"
         android:layout_width="match_parent"
         android:layout_height="677dp"
         android:layout_marginTop="50dp" />

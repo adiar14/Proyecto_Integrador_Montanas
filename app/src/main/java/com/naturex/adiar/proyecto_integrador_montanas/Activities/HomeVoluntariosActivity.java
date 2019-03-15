@@ -49,13 +49,7 @@ public class HomeVoluntariosActivity extends AppCompatActivity
 
 
 
-        LottieAnimationView fab = (LottieAnimationView) findViewById(R.id.fabAniadir);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                incidencias(view);
-            }
-        });
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
