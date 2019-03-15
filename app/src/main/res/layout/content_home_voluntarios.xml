@@ -11,8 +11,9 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvRutas"
         android:layout_width="match_parent"
-        android:layout_height="672dp"
-        tools:layout_editor_absoluteY="9dp" />
+        android:layout_height="668dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
